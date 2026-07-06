@@ -1,0 +1,19 @@
+# Convenience: spin up just PostgreSQL for local development.
+# Run: docker compose up -d
+# Then start the backend and frontend as described in README.md
+version: "3.8"
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: asset_management
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - asset_management_pgdata:/var/lib/postgresql/data
+
+volumes:
+  asset_management_pgdata:
