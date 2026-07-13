@@ -104,13 +104,12 @@ reverse proxy as the API).
 All `/api/**` routes except `/api/auth/**` require a `Bearer` token from login.
 
 ## Notes & next steps
-
-This is a solid working starting point, not a finished enterprise product. Some things
-you'll likely want to add before relying on it in production:
+These are going to  elevate my program to be more functional and realistic.
 
 - Email verification / password reset flow
-- File attachments (photos, invoices, warranty PDFs) per asset
+- File attachments (photos, invoices, warranty PDFs) per asset  for asset verification
 - CSV import/export for bulk asset loads
-- Audit log of who changed what
-- Automated tests (a couple of unit test stubs are a good place to start)
-- Depreciation schedules if you need that level of financial reporting later
+- Audit log of who changed what (a nice change log with it's own table )
+- Automated tests (use wiremock )
+- Depreciation schedules :probably run monthly asset depreciation. scheduler implementation ...maybe use a cron job for 
+- auto depreciation and allow user  to depreciate too
